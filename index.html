@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+	<!--Cabeçalho-->
+	<head>
+		<!--Charset usado para exibir os caracteres da página-->
+		<meta charset="utf-8">
+		<!--Deixando a largura da janela auto ajustável a largura do equipamento que está visualizando-->
+		<meta name="viewport" content="width=device-width">
+		<!--Chamando o arquivo CSS-->
+		<link rel="stylesheet" href="styles.css">
+		<!--Título da página na aba do browser-->
+		<title>Wiki HTML 5 / CSS 3</title>
+	</head>
+	
+	<!--Corpo-->
+	<body>
+
+		<h1>Conteúdo</h1>
+		
+		<ol>
+			<li><a href="#titulo_tags_HTML" title="Pular para Tags HTML">Tags HTML</a></li>
+			<li><a href="#titulo_hyperlink" title="Pular para Tag HTML Hyperlink">Tag Hyperlink</a></li>
+			<li><a href="#titulo_tabela" title="Pular para Tag HTML Table">Tag Table</a></li>
+			<li><a href="#titulo_rules_CSS" title="Pular para Rules CSS">Rules CSS</a></li>
+			<li><a href="#titulo_testes_HTML" title="Pular para Testes HTML">Testes HTML</a></li>
+			
+		</ol>
+		
+		
+		<h1 id="titulo_tags_HTML">Tags HTML</h1>
+		
+		<h2>Tags tipo Block</h2>
+		
+		<!--Lista não numerada-->
+		<ul>
+			<li>head: Cabeçalho</li>
+			<li>body: Corpo</li>
+			<li>h1..h6: Título</li>
+			<li>p: Parágrafo</li>
+			<li>ol/ul: Lista</li>
+			<li>table: Tabela</li>
+			<li>div: Agrupamento em Block(para formatação/script)</li>
+			<li>etc...</li>
+		</ul>
+		
+		<h2>Tags tipo Inline</h2>
+		
+		<ul>
+			<li>img: Imagem</li>
+			<li>em: ênfase (itálico por default)</li>
+			<li>strong: importância (negrito por default)</li>
+			<li>mark: relevância (destacado por default)</li>
+			<li>ins: inserção (sublinhado por default)</li>
+			<li>del: remoção (sobretachado por default)</li>
+			<li>a href: hyperlink</li>
+			<li>span: Agrupamento Inline(para formatação/script)</li>
+			<li>etc...</li>
+		</ul>
+		
+		<h2 id="titulo_hyperlink"> Tag &lt;A HREF (Hyperlink)></h2>
+		
+		<h3>Hyperlink interno</h3>
+		
+		<!--&lt; "<" LESS THAN-->
+		<!--&gt; ">" GREATER THAN-->
+		<p>Usado tanto para endereço de arquivo quanto de página que está contido dentro do próprio site.</p>
+		<p>Syntaxe: &lt;a href="endereço relativo ou absoluto interno"><em>Nome explícito do link na página</em>&lt;/a></p>
+		
+		<h3>Hyperlink externo</h3>
+		
+		<p>Usado para endereço de arquivo quanto de página que está contido fora do próprio site. O endereço deve estar completo.</p>
+		<p>Syntaxe: &lt;a href="endereço completo web"><em>Nome explícito do link na página</em>&lt;/a></p>
+		
+		<p>Pode também ser usado para endereço de e-mail:</p>
+		<p>Syntaxe: &lt;a href="mailto:email@gmail.com"><em>Nome explícito do link para e-mail na página</em>&lt;/a></p>
+		
+		<h3>Endereçamento do hyperlink</h3>
+		<p>Adicionando o atributo target="..." podemos definir se o link abre na mesma aba ou em uma nova:</p>
+		<p>Syntaxe: &lt;a href="link" target="_self"><em>Mesma aba</em>&lt;/a></p>
+		<p>Syntaxe: &lt;a href="link" target="_blank"><em>Nova aba</em>&lt;/a></p>
+		
+		<h3>Hyperlink para própria página</h3>
+		<p>Atribuindo para qualquer elemento da página um id, podemos posicionar a página diretamente a ele usando o hyperlink:</p>
+		<p>Syntaxe: &lt;h1 id="primeiro_titulo"><em>Título</em>&lt;/h1> <em>&lt;!--Aqui é o local endereçado--></em></p>
+		<p>Syntaxe: &lt;a href="#primeiro_titulo"><em>Pular para primeiro título</em>&lt;/a> <em>&lt;!--Referenciando o local
+		Usa-se # antes da chamada do id no Hyperlink--></em></p>
+	
+		<h2 id="titulo_tabela">Tag Table</h2>
+		<p>Para construir uma tabela, a tag Table usa vários componentes:</p>
+		<table>
+			<caption>Tags usadas para construção de tabelas</caption>
+			
+			<thead>
+			<tr><th>Tag</th><th>Nível</th><th>Descrição</th></tr>
+			</thead>
+			
+			<tbody>
+				<tr><td class="table_row_1">&lt;table>&lt;/table></td><td class="table_row_2">0</td><td>Define o block da table</td></tr>
+				<tr><td class="table_row_1">&lt;caption>&lt;/caption></td><td class="table_row_2">1</td><td>Dentro da table, declara sua legenda</td></tr>
+				<tr><td class="table_row_1">&lt;thead>&lt;/thead></td><td class="table_row_2">1</td><td>Define dentro do block da table, a parte do cabeçalho</td></tr>
+				<tr><td class="table_row_1">&lt;tbody>&lt;/tbody></td><td class="table_row_2">1</td><td>Define dentro do block da table, a parte do corpo</td></tr>
+				<tr><td class="table_row_1">&lt;tfoot>&lt;/tfoot></td><td class="table_row_2">1</td><td>Define dentro do block da table, a parte do rodapé</td></tr>
+				<tr><td class="table_row_1">&lt;tr>&lt;/tr></td><td class="table_row_2">2</td><td>Declara uma linha da tabela</td></tr>
+				<tr><td class="table_row_1">&lt;td>&lt;/td></td><td class="table_row_2">3</td><td>Define uma célula da tabela</td></tr>
+				<tr><td class="table_row_1">&lt;th>&lt;/th></td><td class="table_row_2">3</td><td>Define uma célula de cabeçalho da tabela</td></tr>
+			</tbody>
+			
+		</table>
+		
+		<h1 id="titulo_rules_CSS">Rules CSS</h1>
+		
+		<p> No arquivo CSS declaramos o estilo de cada tag usada no HTML. Para declarar para uma tag inteira, basta:</p>
+		<p> h1{ <em>"Código de estilo"</em> }</p>
+		<p> Caso queira alterar o estilo de somente um id da tag dentro do código, chama-se diretamente pelo id:</p>
+		<p>#id_teste{ <em>"Código de estilo"</em>}</p>
+		
+		<h1 id="titulo_testes_HTML">Testes HTML</h2>
+		<p> <a href="html_test1.html" target="_blank">Teste 1</a></p>
+		
+		<h2> Cores </h2>
+		<p><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/color_value" target="_blank"> Códigos de referência de cores na MDN;</a></p>
+		
+	
+		
+		<h2> Imagens </h2>
+		<img src="code_logos.png" id="img_teste">
+		
+		<p><a href="#top">Volte ao topo</a></p>
+		
+	</body>
+</html>
+
